@@ -1,1 +1,1 @@
-docker build -t stringsvc:latest .
+docker build -t stringsvc:latest ../
