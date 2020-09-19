@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jori-ap-service
+spec:
+  type: ClusterIP
+  selector:
+    app: stringsvc
+  ports: # ここの意味を考える　NODE_PORTだと、NODEのIPとNODEのPORTにアクセスすると疎通するのでここの意味がわからない
+    - port: 80
+      targetPort: 8080

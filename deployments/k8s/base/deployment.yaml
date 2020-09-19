@@ -1,0 +1,23 @@
+apiVersion: apps/v1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: stringsvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stringsvc
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: stringsvc
+    spec:
+      containers:
+        - image: stringsvc:latest
+          imagePullPolicy: Never
+          name: stringsvc
+          ports: # PODの8000番に、このコンテナの8000版をexposeするという意味っぽい
+            - containerPort: 8080
+              name: stringsvc

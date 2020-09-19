@@ -3,3 +3,5 @@ go kitのtutorialである[stringsvc](https://gokit.io/examples/stringsvc.html#f
 
 ## doc
 [apの動作確認](doc/ap.md)
+## k8s
+[k8s](doc/k8s.md)
