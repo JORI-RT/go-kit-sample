@@ -5,6 +5,7 @@ RUN mkdir /go/src/work
 #  goのrestのlibraryをインストール
 RUN go get -u github.com/go-kit/kit/transport/http
 RUN go get -u github.com/go-kit/kit/endpoint
+RUN go get -u github.com/prometheus/client_golang/prometheus
 # コンテナログイン時のディレRUN 定
 WORKDIR /go/src/work
 # ホストのファイルをコンテナの作業ディレクトリに移行
